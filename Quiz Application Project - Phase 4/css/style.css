@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@700&family=Delius&family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@700&family=Delius&family=Merienda+One&display=swap');
+ body {
+     margin:0;
+     font-size: 40px;
+     background-color: #ffffff;
+     font-family: 'Delius', cursive;
+     font-weight: 500;
+}
+ .home-box{
+     max-width: 700px;
+     background-color: rgb(199, 136, 241);
+     margin: 100px auto;
+     padding: 30px;
+     border-radius: 10px;
+     text-align: center;
+}
+ .home-box p{
+     font-size: 20px;
+     margin-bottom: 10px;
+     font-weight: 400;
+     color: #000000;
+     line-height: 22px;
+}
+ .home-box p span{
+     font-weight: 500;
+}
+ .home-box h4{
+     font-size: 28px;
+     color: #000000;
+     font-weight: 500;
+     margin-bottom: 15px;
+     line-height: 25px;
+}
+ .home-box .btnStart{
+     margin-top: 20px;
+}
+ *{
+     margin: 0;
+     padding: 0;
+     outline: none;
+     box-sizing: border-box;
+}
+ .btnStart{
+     padding: 15px 45px;
+     border: none;
+     border-radius: 5px;
+     color: #000000;
+     background-color: #ffffff;
+     font-family: 'Delius', cursive;
+     font-size: 18px;
+     cursor: pointer;
+}
+ #resultTemplate, #reviewTemplate, #quizTemplate{
+     background-color: rgb(199, 136, 241);
+     text-align: center;
+     max-width: 700px;
+     background-color: rgb(199, 136, 241);
+     margin: 100px auto;
+     padding: 30px;
+     border-radius: 10px;
+     font-family: 'Delius', cursive;
+     margin-right: 5px;
+     margin-bottom: 5px;
+}
+ #btnRNext{
+     margin-bottom: 5px;
+     padding-bottom: 5px;
+}
+ .quiz-box{
+     background-color: rgb(199, 136, 241);
+     text-align: center;
+     max-width: 700px;
+     background-color: rgb(199, 136, 241);
+     margin: 100px auto;
+     padding: 30px;
+     border-radius: 10px;
+     font-family: 'Delius', cursive;
+}
+ .quiz-box .question-number{
+     font-size: 16px;
+     color: #000000;
+     font-weight: 400;
+     border-bottom: 1px solid #ffffff;
+     line-height: 25px;
+}
+ .quiz-box .question-text{
+     font-size: 22px;
+     color: #000000;
+     line-height: 28px;
+     font-weight: 400;
+     margin: 0;
+     padding: 20px 0;
+}
+ .quiz-box .option-container .option{
+     background-color: #ffffff;
+     padding: 15px;
+     font-size: 16px;
+     line-height: 22px;
+     color: #000000;
+     border-radius: 5px;
+     margin-bottom: 10px;
+     cursor: pointer;
+     width: 100%;
+}
+ .quiz-box .answer-indicator div{
+     height: 30px;
+     width: 30px;
+     display: inline-block;
+     background-color: #ffffff;
+     border-radius: 50%;
+     margin-right: 3px;
+     margin-top: 15px;
+}
+ .quiz-box .answer-indicator{
+     border-top: 1px solid #cccccc;
+}
+ .quiz-box .btnNext{
+     padding: 6px 10px;
+     border: none;
+     border-radius: 2px;
+     color: #000000;
+     background-color: #ffffff;
+     font-family: 'Delius', cursive;
+     font-size: 12px;
+     cursor: pointer;
+     font-family: 'Delius', cursive;
+     float: right;
+}
+ .quiz-box .btnPrev{
+     padding: 6px 10px;
+     border: none;
+     border-radius: 2px;
+     color: #000000;
+     background-color: #ffffff;
+     font-family: 'Delius', cursive;
+     font-size: 12px;
+     cursor: pointer;
+     font-family: 'Delius', cursive;
+     float: left;
+}
+ .result-box {
+     text-align: center;
+     max-width: 400px;
+     background-color: rgb(199, 136, 241);
+     margin: 100px auto;
+     padding: 30px;
+     border-radius: 10px;
+     font-size: 28px;
+     font-family: 'Delius', cursive;
+     text-align: left;
+}
+ .result-box h1{
+     font-size: 36px;
+     line-height: 42px;
+     color: #000000;
+     text-align: center;
+}
+ .result-box table{
+     width: 100%;
+     border-collapse: collapse;
+     margin: 30px 0;
+     font-weight: 400;
+     color: #000000;
+}
+ .result-box table td{
+     border: 1px solid #ffffff;
+     padding: 8px 15px;
+}
+ .option{
+     text-align: left;
+     margin-left: 10px auto;
+}
+ 

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Quiz App</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> </head>
+
+<body>
+	<div id="mainbox" class="quiz-box">
+		<div class="question-number"> <b>Quiz Box</b> </div>
+		<div class="question-text">
+			</h3>
+		</div>
+		<div class="option-container">
+			<div class="option">
+				<label id="f-option" class="element-animation"> The quiz is on Java Programming.
+					<br>It contains a total of 5 questions.
+					<br>Each question is for 1 mark with no negative marking.
+					<br>Use the Next and Previous buttons to navigate through the quiz. </label>
+			</div>
+		</div>
+		<div class="next-question">
+			<button id="btnNext" class="btnNext" style="text-decoration:none"><b>Next</b></button>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="progress">
+			<div class="progress-bar" style="width:0%"></div>
+		</div>
+	</div>
+	</div>
+	<script id='thankyou' type='text/template'>
+		<div class="question-number"> <b>Quiz Box</b> </div>
+		<div class="question-text"> <span id="question"> Coded by Sneha Khanna</span> </div>
+		<div class="option-container">
+			<div class="option">
+				<label id="f-option" class="element-animation">
+					<h3>THANK YOU!<h3>.
+         
+             
+         </label>
+             </div>
+         </div>
+         
+      </script>
+      <script id='resultTemplate' type='text/template'>
+         <div class="result-box">
+             <h1>Quiz Result</h1>
+             <table>
+                 <tr>
+                     <td>Total Questions</td>
+                     <td><span id="totalQuestions" class="totalQ" >5</span></td>
+                 </tr>
+                 <tr>
+                     <td>Attempted</td>
+                     <td><span id="totalAttempted" class="totalA" >5</span></td>
+                 </tr>
+                 <tr>
+                     <td>Correct</td>
+                     <td><span id="totalCorrect" class="totalC"><span>3</span></td>
+                 </tr>
+                 <tr>
+                     <td>Wrong</td>
+                     <td><span id= "totalWrong" class="totalW" >2</span></td>
+                 </tr>
+                 <tr>
+                     <td>Percentage</td>
+                     <td><span id="percentage" class="percentage" >0.00 %</span></td>
+                 </tr>
+             </table>
+             <div class="next-question">   
+                 <button  id="btnRNext" class="btnNext"  style="text-decoration:none"><b>Review</b></button>  
+             <div>
+            
+         </div>
+      </script>
+      <script id='quizTemplate' type='text/template'>
+         <div class="question-number">
+           Question <b id ="qno"></b> of 5
+         </div>
+         <div class="question-text">
+         <span id="question"> How can you add a single line comment in a JavaScript?</span>
+         </h3> </div>
+			<div class="option-container">
+				<div class="option">
+					<input type="radio" id="f-option" name="selector" value="1">
+					<label for="s-option" id="option1" class="element-animation">/*-- comment --*/</label>
+				</div>
+				<div class="option">
+					<input type="radio" id="s-option" name="selector" value="2">
+					<label for="s-option" id="option2" class="element-animation">comment //</label>
+				</div>
+				<div class="option">
+					<input type="radio" id="t-option" name="selector" value="3">
+					<label for="t-option" id="option3" class="element-animation">comment [ ]</label>
+				</div>
+				<div class="option">
+					<input type="radio" id="t-option" name="selector" value="4">
+					<label for="t-option" id="option4" class="element-animation">commentsss [ ]</label>
+				</div>
+			</div>
+			<div class="next-question">
+				<button id="btnNext" class="btnNext" style="text-decoration:none"><b>Next</b></button>
+				<div>
+					<button id="btnPrev" class="btnPrev" style="text-decoration:none"><b>Previous</b></button>
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="progress">
+					<div id="progress" class="progress-bar" style="width:10%"></div>
+				</div>
+			</div>
+	</script>
+	<script id='reviewTemplate' type='text/template'>
+		<div class="question-number"> Question <b id="qno"></b> of 5 </div>
+		<div class="question-text"> <span id="question"> How can you add a single line comment in a JavaScript?</span> </h3>
+		</div>
+		<div class="option-container">
+			<div class="option">
+				<input type="radio" id="f-option" name="selector" value="1" disabled>
+				<label for="s-option" id="option1" class="element-animation">/*-- comment --*/</label>
+			</div>
+			<div class="option">
+				<input type="radio" id="s-option" name="selector" value="2" disabled>
+				<label for="s-option" id="option2" class="element-animation">comment //</label>
+			</div>
+			<div class="option">
+				<input type="radio" id="t-option" name="selector" value="3" disabled>
+				<label for="t-option" id="option3" class="element-animation">comment [ ]</label>
+			</div>
+			<div class="option">
+				<input type="radio" id="t-option" name="selector" value="4" disabled>
+				<label for="t-option" id="option4" class="element-animation">commentsss [ ]</label>
+			</div>
+			<div class="option">
+				<label id="correct_answer" class="element-animation">commentsss [ ]</label>
+			</div>
+			<div class="option">
+				<label id="your_answer" class="element-animation">commentsss [ ]</label>
+			</div>
+		</div>
+		<div class="next-question">
+			<button id="btnRNext" class="btnNext" style="text-decoration:none"><b>Next</b></button>
+			<div>
+				<button id="btnRPrev" class="btnPrev" style="text-decoration:none"><b>Previous</b></button>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="progress">
+				<div id="progress" class="progress-bar" style="width:10%"></div>
+			</div>
+		</div>
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+	var questionNo = 0;
+	var correct = 0;
+	var resultList = [];
+	var review = 0;
+	var quizdata = '{ "Questions": [' + '{"question": "Which of the following is not a Java features?","options": ["Dynamic", "Architecture Neutral", "Use of pointers", "Object-oriented"],"answer": 3},' + '{"question": "In which process, a local variable has the same name as one of the instance variables?","options": ["Serialization", "Variable Shadowing", "Abstraction", "Multi-threading"],"answer": 2},' + '{"question": "Java is a _____ language", "options":["weakly typed","strongly typed","moderately typed","none of these"],"answer": 2},' + '{"question": "Which package contains the Random class?","options": ["java.util package", "java.lang package", "java.awt package", "java.io package"],"answer": 1},' + '{"question": "Which of the following is a reserved keyword in Java?","options": ["object", "strictfp", "main", "system"],"answer": 2}]}';
+	obj = JSON.parse(quizdata);
+	$("#mainbox").on("click", "#btnNext", function(e) {
+		e.preventDefault();
+		console.log("Reached Next");
+		console.log(obj.Questions[2].answer);
+		if(questionNo != 0) {
+			var radioValue = $("input[name='selector']:checked").val();
+			resultList[questionNo - 1] = radioValue;
+			console.log(resultList);
+		}
+		questionNo++;
+		var list = document.getElementById("mainbox");
+		while(list.hasChildNodes()) {
+			list.removeChild(list.firstChild);
+		}
+		if(questionNo == 6) {
+			var attempted = 0;
+			var correct = 0;
+			var wrong = 0;
+			for(var i = 0; i < 5; i++) {
+				if(typeof resultList[i] != 'undefined') {
+					attempted = attempted + 1;
+					if(resultList[i] == obj.Questions[i].answer) {
+						correct = correct + 1;
+					}
+				}
+			}
+			console.log(attempted);
+			console.log(correct);
+			wrong = 5 - correct;
+			totalQuestions = 5
+			wrong = 5 - correct;
+			var $template = $($("#resultTemplate").html());
+			$template.find("#totalAttempted").html(attempted);
+			$template.find("#totalCorrect").html(correct);
+			$template.find("#totalWrong").html(wrong);
+			$template.find("#percentage").html(correct / 5 * 100);
+			$("#mainbox").append($template);
+		} else {
+			var $template = $($("#quizTemplate").html());
+			console.log(questionNo);
+			$template.find("#qno").html(questionNo);
+			$template.find("#question").html(obj.Questions[questionNo - 1].question);
+			$template.find("#option1").html(obj.Questions[questionNo - 1].options[0]);
+			$template.find("#option2").html(obj.Questions[questionNo - 1].options[1]);
+			$template.find("#option3").html(obj.Questions[questionNo - 1].options[2]);
+			$template.find("#option4").html(obj.Questions[questionNo - 1].options[3]);
+			$template.find("#progress").css('width', questionNo / 5 * 100 + '%')
+			if(questionNo == 1) {
+				$template.find("#btnPrev").css('visibility', 'hidden');
+			}
+			if(questionNo == 5) {
+				$template.find("#btnNext").html("Submit");
+			}
+		}
+		$("#mainbox").append($template);
+	});
+	$("#mainbox").on("click", "#btnRNext", function(e) {
+		e.preventDefault();
+		review++;
+		console.log("ReachedRNext");
+		var list = document.getElementById("mainbox");
+		while(list.hasChildNodes()) {
+			list.removeChild(list.firstChild);
+		}
+		if(review == 6) {
+			var $template = $($("#thankyou").html());
+			$("#mainbox").append($template);
+		} else {
+			var $template = $($("#reviewTemplate").html());
+			console.log(review);
+			$template.find("#qno").html(review);
+			$template.find("#question").html(obj.Questions[review - 1].question);
+			$template.find("#option1").html(obj.Questions[review - 1].options[0]);
+			$template.find("#option2").html(obj.Questions[review - 1].options[1]);
+			$template.find("#option3").html(obj.Questions[review - 1].options[2]);
+			$template.find("#option4").html(obj.Questions[review - 1].options[3]);
+			$template.find("#progress").css('width', questionNo / 5 * 100 + '%')
+			$template.find("#correct_answer").html(" Correct Answer :" + obj.Questions[review - 1].options[obj.Questions[review - 1].answer]);
+			$template.find("#your_answer").html(" Your Answer :" + obj.Questions[review - 1].options[resultList[review - 1]]);
+			$template.find("#progress").css('width', review / 5 * 100 + '%')
+			if(review == 1) {
+				console.log(review);
+				$template.find("#btnRPrev").css('visibility', 'hidden');
+			}
+			if(review == 5) {
+				$template.find("#btnRNext").html("Finish");
+			}
+			$("#mainbox").append($template);
+		}
+	});
+	$("#mainbox").on("click", "#btnPrev", function(e) {
+		e.preventDefault();
+		if(questionNo != 0) {
+			var radioValue = $("input[name='selector']:checked").html();
+			resultList[questionNo - 1] = radioValue;
+			console.log(resultList);
+		}
+		console.log("ReachedPrev");
+		questionNo--;
+		var list = document.getElementById("mainbox");
+		while(list.hasChildNodes()) {
+			list.removeChild(list.firstChild);
+		}
+		var $template = $($("#quizTemplate").html());
+		console.log(questionNo);
+		$template.find("#qno").html(questionNo);
+		$template.find("#question").html(obj.Questions[questionNo - 1].question);
+		$template.find("#option1").html(obj.Questions[questionNo - 1].options[0]);
+		$template.find("#option2").html(obj.Questions[questionNo - 1].options[1]);
+		$template.find("#option3").html(obj.Questions[questionNo - 1].options[2]);
+		$template.find("#option4").html(obj.Questions[questionNo - 1].options[3]);
+		$template.find("#progress").css('width', questionNo / 5 * 100 + '%');
+		if(questionNo == 1) {
+			$template.find("#btnPrev").css('visibility', 'hidden');
+		}
+		if(questionNo == 5) {
+			$template.find("#btnNext").html("Submit");
+		}
+		$("#mainbox").append($template);
+	});
+	$("#mainbox").on("click", "#btnRPrev", function(e) {
+		e.preventDefault();
+		review--;
+		console.log("ReachedRPrev");
+		var list = document.getElementById("mainbox");
+		while(list.hasChildNodes()) {
+			list.removeChild(list.firstChild);
+		}
+		var $template = $($("#reviewTemplate").html());
+		console.log(review);
+		$template.find("#qno").html(review);
+		$template.find("#question").html(obj.Questions[review - 1].question);
+		$template.find("#option1").html(obj.Questions[review - 1].options[0]);
+		$template.find("#option2").html(obj.Questions[review - 1].options[1]);
+		$template.find("#option3").html(obj.Questions[review - 1].options[2]);
+		$template.find("#option4").html(obj.Questions[review - 1].options[3]);
+		$template.find("#correct_answer").html(" Correct Answer :" + obj.Questions[review - 1].options[obj.Questions[review - 1].answer]);
+		$template.find("#your_answer").html(" Your Answer :" + obj.Questions[review - 1].options[resultList[review - 1]]);
+		$template.find("#progress").css('width', review / 5 * 100 + '%')
+		if(review == 1) {
+			$template.find("#btnRPrev").css('visibility', 'hidden');
+		}
+		if(review == 5) {
+			$template.find("#btnRNext").html("Finish");
+		}
+		$("#mainbox").append($template);
+	});
+	</script>
+</body>
+
+</html>
